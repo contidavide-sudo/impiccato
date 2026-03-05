@@ -13,15 +13,15 @@ namespace impiccato
 
             if (difficolta == 1)
             {
-                indiceParola = rnd.Next(0, 4);
+                indiceParola = rnd.Next(0, 3);
             }
             else if(difficolta == 2)
             {
-                indiceParola = rnd.Next(4, 7);
+                indiceParola = rnd.Next(3, 6);
             }
             else if(difficolta == 3)
             {
-                indiceParola = rnd.Next(7, 10);
+                indiceParola = rnd.Next(6, 9);
             }
 
             return parolaScelta = tema[indiceParola];
@@ -86,7 +86,7 @@ namespace impiccato
             }
             else
             {
-                Console.WriteLine("La parola non c'è!!!");
+                Console.WriteLine("La lettera non c'è!!!");
 
                 punti = punti - 10; //Decrementazione del punteggiom se si sbaglia
 
@@ -112,6 +112,8 @@ namespace impiccato
         {
             Console.Write("Scrivi la parola:");
             string provaParola = Console.ReadLine();
+
+            provaParola = provaParola.ToLower();
 
             if (parola == provaParola)
             {
@@ -154,11 +156,11 @@ namespace impiccato
         static void Main(string[] args)
         {
              //Tre array, ognuno di un propio tema le prime tre parole degli array sono facili, le ultime tre difficili e le tre a metà sono medie
-            string[] animali = { "Cane", "Gatto", "Leone", "Giraffa", "Pinguino", "Scimpanze",  "Ornitorinco", "Armadillo", "Camaleonte", };
+            string[] animali = { "cane", "gatto", "leone", "giraffa", "pinguino", "scimpanze",  "ornitorinco", "armadillo", "camaleonte", };
 
-            string[] oggetti = { "Libro", "Palla", "Tavolo", "Chitarra", "Computer", "Orologio", "Clessidra", "Pianoforte", "Caleidoscopio" };
+            string[] oggetti = { "libro", "palla", "tavolo", "chitarra", "computer", "orologio", "clessidra", "pianoforte", "caleidoscopio" };
 
-            string[] citta = { "Roma", "Milano", "Parigi", "Berlino", "Venezia", "Firenze", "Dakar", "Stoccolma", "Tirana" };
+            string[] citta = { "roma", "milano", "parigi", "berlino", "venezia", "firenze", "dakar", "stoccolma", "tirana" };
 
             string[] alfabeto = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
